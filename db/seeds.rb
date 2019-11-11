@@ -1,6 +1,6 @@
-ian = User.create(name: 'Ian', email: 'i@i.com')
-ren = User.create(name: 'Ren', email: 'r@r.com')
-krista = User.create(name: 'Krista', email: 'k@k.com')
+ian = User.create(name: 'ian', email: 'i@i.com')
+ren = User.create(name: 'ren', email: 'r@r.com')
+krista = User.create(name: 'krista', email: 'k@k.com')
 
 food = Conversation.create(topic: 'food')
 dolphins = Conversation.create(topic: 'dolphins')
