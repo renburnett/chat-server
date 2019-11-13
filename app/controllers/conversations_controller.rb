@@ -5,10 +5,15 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.new(convo_params)
-    @conversation.save
-
-    render json: @conversation
+    conversation = Conversation.new(convo_params)
+    if conversation.save
+      serialized_data = ActiveModelSerializers::Adapter::Json.new(
+        ConversationSerializer.new(conversation)
+      ).serializable_hash
+      ActionCable.server.broadcast 'conversations_channel', serialized_data
+      head :ok
+    end
+    # render json: conversation
   end
 
   private
