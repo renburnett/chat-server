@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:3cd6b24f8a831ced9c1c50f38389d854@hammerjaw.redistogo.com:11896/
   channel_prefix: chat_production
