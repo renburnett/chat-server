@@ -11,9 +11,8 @@ class ConversationsController < ApplicationController
         ConversationSerializer.new(conversation)
       ).serializable_hash
       ActionCable.server.broadcast 'conversations_channel', serialized_data
-      head :ok
     end
-    # render json: conversation
+    render json: conversation
   end
 
   private
