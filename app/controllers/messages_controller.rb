@@ -11,9 +11,8 @@ class MessagesController < ApplicationController
         MessageSerializer.new(message)
       ).serializable_hash
       MessagesChannel.broadcast_to conversation, serialized_data
-      head :ok
     end
-    # render json: @message
+    render json: message
   end
 
   private
