@@ -8,3 +8,9 @@ production:
   adapter: redis
   url: redis://redistogo:3cd6b24f8a831ced9c1c50f38389d854@hammerjaw.redistogo.com:11896/
   channel_prefix: chat_production
+  
+  :host: hammerjaw.redistogo.com
+  :port: 11896
+  :password: 3cd6b24f8a831ced9c1c50f38389d854
+  :inline: true
+  :timeout: 1
